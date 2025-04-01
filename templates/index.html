@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Review Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>Sentiment Analyzer</h1>
+            </div>
+            <p class="subtitle">Analyze the sentiment of Amazon reviews</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="text">Text Input</button>
+                    <button class="tab-btn" data-tab="link">Review Link</button>
+                </div>
+                
+                <div class="tab-content active" id="text-tab">
+                    <textarea id="review-text" placeholder="Enter your Amazon review text here..."></textarea>
+                </div>
+                
+                <div class="tab-content" id="link-tab">
+                    <input type="text" id="review-link" placeholder="Paste Amazon review link here...">
+                    <p class="note">Note: Link functionality will be implemented in future updates</p>
+                </div>
+                
+                <button id="analyze-btn">Analyze Sentiment</button>
+            </div>
+
+            <div class="result-section" id="result-container">
+                <div class="result-card hidden" id="result-card">
+                    <div class="sentiment-icon">
+                        <i class="fas fa-smile" id="sentiment-icon"></i>
+                    </div>
+                    <div class="sentiment-result">
+                        <h2>Sentiment: <span id="sentiment-text">-</span></h2>
+                        <div class="confidence-bar">
+                            <div class="confidence-level" id="confidence-level"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-text-display">
+                    <h3>Analyzed Text:</h3>
+                    <p id="analyzed-text"></p>
+                </div>
+            </div>
+        </main>
+
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="spinner"></div>
+            <p>Analyzing sentiment...</p>
+        </div>
+
+        <footer>
+            <p>Amazon Review Sentiment Analysis | Powered by Machine Learning</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
