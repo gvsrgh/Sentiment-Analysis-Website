@@ -32,7 +32,7 @@ try:
     with open('vectorizer.pkl', 'rb') as f:
         vectorizer = pickle.load(f)
     
-    with open('gridsearch_model.pkl', 'rb') as f:
+    with open('https://drive.google.com/file/d/1ox3MUMj---Osj8tBCKsWs-HzJMPAU3sa/view?usp=drive_link', 'rb') as f:
         model = pickle.load(f)
     
     # If models loaded successfully, use them for prediction
