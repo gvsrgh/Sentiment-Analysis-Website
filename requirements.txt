@@ -3,4 +3,10 @@ flask-cors==3.0.10
 scikit-learn==1.0.2
 numpy==1.22.0
 scipy==1.7.3
-
+setuptools>=65.5.0
+wheel
+cython
+numpy
+scipy
+joblib
+threadpoolctl
